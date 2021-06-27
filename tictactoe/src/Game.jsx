@@ -1,7 +1,11 @@
+import { useState } from 'react';
 import './App.css';
 import { Board } from './components/Board';
 
-export function App() {
+export function Game() {
+    const [history, setHistory] = useState([]);
+    const [xIsNext, setXIsNext] = useState(true);
+    
     return (
         <div className="game">
             <div className="game-board">
